@@ -6,7 +6,6 @@ app = Flask(__name__)
 def inicio():
     return {"msg":"Ola mundo"}
 
-
 @app.route("/mensagem", methods=["GET"])
 def rend_template():
     h1 = request.args.get("h1")
