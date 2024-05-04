@@ -16,6 +16,11 @@ def rend_template():
         "h2":h2
     })
     
+@app.route("/login", methods=["GET"])
+def login():
+    return render_template("usuario_templates/usuario-login.html")
+
+
 #Importação da classe onde fica o blueprint
 from routes.UsuarioRoutes import UsuarioRoutes
 #Adicionando o blueprint na instância principal do flask

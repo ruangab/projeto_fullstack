@@ -30,7 +30,7 @@ class UsuarioRoutes():
         })
 
 
-    @usuario_routes.route("/login", methods = ["GET"])
+    @usuario_routes.route("/login", methods = ["POST"])
     def login():
         email_usuario = request.form["email_usuario"]
         senha_usuario = request.form["senha_usuario"]
@@ -46,7 +46,7 @@ class UsuarioRoutes():
         if usuario_banco is None:
             return jsonify({
                 "status":"erro",
-                "mensgem":"Usuario não cadastrado"
+                "mensagem":"Usuario não cadastrado"
             })
     
         return jsonify({
